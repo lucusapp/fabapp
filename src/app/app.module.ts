@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import {APP_ROUTING} from './app.routes';
 
+//services
+import {FabappService} from './services/fabapp.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -23,7 +26,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [FabappService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

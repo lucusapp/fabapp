@@ -1,3 +1,16 @@
-<p>
-  profile works!
-</p>
+<div class="container top-30">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="alias">Buscador de Asociados</label>
+
+      <input [(ngModel)]="alias"
+      (keyup)="buscarPartner()"
+      type="text" name="alias"
+      class="form-control"
+      placeholder="Buscador de asociados">
+
+    </div>
+
+  </div>
+
+</div>
