@@ -19,9 +19,9 @@ export class FabappService {
 constructor(private http:Http){}
 
 //creamos una función para que completar el array de la propiedad partners
-  getPartners(alias:string){
+  getPartners(termino:string){
 
-    let query = `${ alias }?fields=id%2Cname%2Cfeed%7Bfull_picture%2Cname%2Ccreated_time%2Cmessage%2Cstory%2Cdescription%7D&access_token=EAAEDPIYZCj7MBANx5YsSRhK4fAQ9NVmp1Fds0GDW1PLZCeOHIXpgRQqLUn5PYnUejUkR8IkyzeNOxLP6ZB8kI4rpGVsEHRhGkEk27UgoFzEJdTwDp7hxF6OIQj9fdZBM1P7sRhAxWioWjFxv2k4h9wpBY6EMPnsZD`;
+    let query = `${ termino }?fields=id%2Cname%2Cfeed%7Bfull_picture%2Cname%2Ccreated_time%2Cmessage%2Cstory%2Cdescription%7D&access_token=EAAEDPIYZCj7MBANx5YsSRhK4fAQ9NVmp1Fds0GDW1PLZCeOHIXpgRQqLUn5PYnUejUkR8IkyzeNOxLP6ZB8kI4rpGVsEHRhGkEk27UgoFzEJdTwDp7hxF6OIQj9fdZBM1P7sRhAxWioWjFxv2k4h9wpBY6EMPnsZD`;
     let url = this.urlBusqueda + query;
 
 
@@ -32,7 +32,7 @@ constructor(private http:Http){}
               this.partners =res.json().feed.data;
                 console.log(this.partners);
     // 5. esto regresa la data
-    //6. Si colocamos un return son los datos que nos va a devolver el profile.component
+    //6. Si colocamos un return son los datos que nos va a devolver los datos a los que suscribirnos en el profile.component
                 return res.json()
      })
 
